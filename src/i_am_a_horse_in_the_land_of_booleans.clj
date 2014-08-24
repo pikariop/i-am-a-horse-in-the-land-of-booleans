@@ -42,6 +42,16 @@
   )
 
 (defn leap-year? [year]
-  ":(")
+ (if (not= 0 (mod year 4))
+    false
+    (if (not= 0 (mod year 100))
+      true
+      (if (not= 0 (mod year 400))
+        false
+        true
+       )
+     )
+   )
+ )
 
 ; '_______'
